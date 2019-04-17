@@ -5,7 +5,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == "POST"){
 
-	$requestBody = file_get_contents('heroku/php');
+	$requestBody = file_get_contents('suttipow/apiai');
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
