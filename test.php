@@ -4,6 +4,6 @@
     $json = json_decode($jsondata,true);
   
 
-    echo $json['sitecode'][0]['id'];
+    echo $json['sitecode'][1]['id'];
 
 ?>
