@@ -15,8 +15,8 @@
     $response->speech ="";
     $response->displayText = "";
     $response->source = "webhook";
- //   echo $json['sitecode'][0]['id'];
-    echo json_decode($response);
+    echo $json['sitecode'][0]['id'];
+  //  echo json_decode($response);
 }  
 else
 {
