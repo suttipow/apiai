@@ -12,7 +12,12 @@ if($method == 'GET'){
         case 'Name':
             $speech = "This question is too personal";
             break;
-
+        case '555'
+            $speech = "555 this ";
+            break;
+           case 'bye':
+            $speech = "yes,This question is too personal";
+            break;
         default:
             $speech = "Sorry, I didnt get that.";
             break;
