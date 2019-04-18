@@ -13,23 +13,20 @@ if($method == 'POST'){
     //echo $json['sitecode'][1]['id'];
      $text = $json->result->parameters->text;
     
-    foeeach($php_data['sitecode'] as $text)
-    {
-      
-        $speech = $php_data['sitecode'][0]['id'];
-      
-    }
+  for($x = 0; $x <= 10; $x++)
+  {
 
-//    if($text == $php_data['sitecode'][0]['id'])
-//    {
-//    $speech = "e001 This question is too personal";
-    
-//    }
-//    else
-//    {
-//    $speech = "Noooooo This question is too personal";
-//    }    
-
+      if($text == $php_data['sitecode'][0]['id'])
+      {
+      $speech = $x;
+      break;
+      }
+      else
+      {
+      $speech = "Noooooo This question is too personal";
+      break;
+      }    
+   }
 
     $response = new \stdClass();
     $response->speech = $speech;
