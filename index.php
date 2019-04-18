@@ -1,6 +1,6 @@
 <?php
 
-$json_data = file_get_contents("test.json");    
+$json_data = file_get_contents("test2.json");    
 $php_data = json_decode($json_data,true);
 
 $method = $_SERVER['REQUEST_METHOD'];
