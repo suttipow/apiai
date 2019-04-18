@@ -10,7 +10,7 @@ if($method == 'POST'){
     $php_data = json_decode($json_data);
     
   
-    echo $json['sitecode'][1]['id'];
+    //echo $json['sitecode'][1]['id'];
     
     
     
@@ -52,6 +52,7 @@ if($method == 'POST'){
 else
 {
     echo "Method not allowed";
+    echo $php_data['sitecode'][1]['id'];
 }
 
 ?>
