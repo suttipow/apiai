@@ -7,7 +7,7 @@ if($method == 'POST'){
     $json = json_decode($requestBody);
 
     $json_data = file_get_contents("test.json");
-    $php_data = json_decode($json_data);
+//    $php_data = json_decode($json_data);
     
   
 //    echo $json['sitecode'][1]['id'];
@@ -26,8 +26,8 @@ if($method == 'POST'){
             $speech = "555 this ";
             break;
         case 'bye':
-           // $speech = "yes This question is too personal";
-            $speech = $php_data['sitecode'][1]['id']
+            $speech = "yes This question is too personal";
+            //$speech = $php_data['sitecode'][1]['id']
             break;
         default:
             $speech = "Sorry, I didnt get that 888.";
