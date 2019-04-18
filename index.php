@@ -3,12 +3,12 @@
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == 'POST'){
-    $requestBody = file_get_contents('php://input');
-    $json = json_decode($requestBody);
 
     $json_data = file_get_contents("test.json");
     $php_data = json_decode($json_data,true);
     
+    $requestBody = file_get_contents('php://input');
+    $json = json_decode($requestBody);
   
     //echo $json['sitecode'][1]['id'];
     
@@ -18,7 +18,7 @@ if($method == 'POST'){
 
     if($text == 'e001')
     {
-    $speech = "This question is too personal";
+    $speech = "000 This question is too personal";
     
     }
     else
@@ -52,7 +52,7 @@ if($method == 'POST'){
 else
 {
     echo "Method not allowed";
-    echo $php_data['sitecode'][1]['id'];
+    echo $php_data['sitecode'][0]['id'];
 }
 
 ?>
