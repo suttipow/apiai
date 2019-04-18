@@ -18,14 +18,14 @@ if($method == 'POST'){
 
       if($text == $php_data['sitecode'][$x]['id'])
       {
-      $speech = "====555  hello world====";
+      $speech = $x;
       break;
       }
-      else
-      {
-      $speech = "Noooooo This question is too personal";
-      break;
-      }    
+//      else
+//      {
+//      $speech = "Noooooo This question is too personal";
+//      break;
+//      }    
    }
 
     $response = new \stdClass();
