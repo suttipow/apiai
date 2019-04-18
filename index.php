@@ -6,8 +6,8 @@ if($method == 'POST'){
     $requestBody = file_get_contents('php://input');
     $json = json_decode($requestBody);
 
-  //  $text = $json->metadata->intentName->text;
-    $text = $json->result->parameters->text;
+    $text = $json->metadata->intentName->text;
+  //  $text = $json->result->parameters->text;
 
     switch ($text) {
         case 'Name':
