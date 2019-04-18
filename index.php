@@ -18,7 +18,7 @@ if($method == 'POST'){
 
       if($text == $php_data['sitecode'][$x]['id'])
       {
-      $speech = $x;
+      $speech = $php_data['sitecode'][$x]['name'];
       break;
       }
 //      else
