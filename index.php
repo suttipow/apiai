@@ -31,7 +31,7 @@ if($method == 'POST'){
             break;
         case 'hi5':
             //$speech = "Hi5 yes This question is too personal";
-            $speech = $php_data['sitecode'][1]['id'];
+            $speech = $php_data['sitecode'][1]['id']
             break;
         default:
             $speech = "Sorry, I didnt get that 888.";
@@ -40,9 +40,7 @@ if($method == 'POST'){
 
     $response = new \stdClass();
     $response->speech = $speech;
-  //    $response->speech = "";
     $response->displayText = $speech;
-  //  $response->displayText = "";
     $response->source = "webhook";
     echo json_encode($response);
 }
