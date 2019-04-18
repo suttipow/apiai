@@ -14,33 +14,34 @@ if($method == 'POST'){
     
     
     
-  //  $text = $json->metadata->intentName->text;
-  //  $text = $json->result->parameters->text;
      $text = $json->result->parameters->text;
 
-    switch ($text) {
-        case 'Name':
-            $speech = "This question is too personal";
-            break;
-        case '555':
-            $speech = "555 this ";
-            break;
-        case 'bye':
-            if($php_data[sitecode'][0]['id'] == 'e001'){
-            $speech = "yes This question is too personal";
-            }
-            else{
-            $speech = "no This question is too personal";
-            }
-            //$speech = $php_data['sitecode'][1]['id']
-            break;
-        case 'hi5':
-            $speech = "Hi5 yes This question is too personal";
-            break;
-        default:
-            $speech = "Sorry, I didnt get that 888.";
-            break;
+    if($text == $php_data['sitecode'][1]['id'])
+    {
+    $speech = "This question is too personal";
+    
     }
+    else
+    {
+    $speech = "Noooooo This question is too personal";
+    }    
+//    switch ($text) {
+//        case 'Name':
+//            $speech = "This question is too personal";
+//            break;
+//        case '555':
+//            $speech = "555 this ";
+//            break;
+//        case 'bye':
+//            $speech = "yes This question is too personal";
+//            break;
+//        case 'hi5':
+//            $speech = "Hi5 yes This question is too personal";
+//            break;
+//        default:
+//            $speech = "Sorry, I didnt get that 888.";
+//            break;
+//    }
 
     $response = new \stdClass();
     $response->speech = $speech;
