@@ -13,7 +13,7 @@ if($method == 'POST'){
     //echo $json['sitecode'][1]['id'];
      $text = $json->result->parameters->text;
     
-  for($x = 0; $x <= 1000; $x++)
+  for($x = 0; $x <= 2000; $x++)
   {
 
       if($text == $php_data['user'][$x]['id'])
