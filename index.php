@@ -1,11 +1,13 @@
 <?php
 
+$json_data = file_get_contents("test.json");    
+$php_data = json_decode($json_data,true);
+
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == 'POST'){
 
-    $json_data = file_get_contents("test.json");
-    $php_data = json_decode($json_data,true);
+
     
     $requestBody = file_get_contents('php://input');
     $json = json_decode($requestBody);
