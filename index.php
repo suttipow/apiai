@@ -3,11 +3,12 @@
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == 'POST'){
-//    $requestBody = file_get_contents('php://input');
-//    $json = json_decode($requestBody);
+    $requestBody = file_get_contents('php://input');
+    $json = json_decode($requestBody);
 
-    $jsondata = file_get_contents("test.json");
-    $json = json_decode($jsondata,true);
+    $json_data = file_get_contents("test.json");
+    $php_data = json_decode($json_data);
+    
   
 //    echo $json['sitecode'][1]['id'];
     
@@ -26,7 +27,7 @@ if($method == 'POST'){
             break;
         case 'bye':
            // $speech = "yes This question is too personal";
-            $speech = $json['sitecode'][1]['id']
+            $speech = $php_data['sitecode'][1]['id']
             break;
         default:
             $speech = "Sorry, I didnt get that 888.";
