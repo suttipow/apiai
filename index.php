@@ -8,7 +8,7 @@ if($method == 'POST'){
 
   //  $text = $json->metadata->intentName->text;
   //  $text = $json->result->parameters->text;
-     $text = $json->queryResult->parameters->text;
+     $text = $json->result->parameters->text;
 
     switch ($text) {
         case 'Name':
