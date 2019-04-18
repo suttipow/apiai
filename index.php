@@ -16,9 +16,9 @@ if($method == 'POST'){
   for($x = 0; $x <= 10; $x++)
   {
 
-      if($text == $php_data['sitecode'][0]['id'])
+      if($text == $php_data['sitecode'][$x]['id'])
       {
-      $speech = $x;
+      $speech = "====555  hello world====";
       break;
       }
       else
