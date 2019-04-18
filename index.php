@@ -20,7 +20,7 @@ if($method == 'POST'){
             $speech = "yes This question is too personal";
             break;
         default:
-            $speech = "Sorry, I didnt get that.";
+            $speech = "Sorry, I didnt get that 888.";
             break;
     }
 
