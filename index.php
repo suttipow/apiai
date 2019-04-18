@@ -16,9 +16,9 @@ if($method == 'POST'){
   for($x = 0; $x <= 1000; $x++)
   {
 
-      if($text == $php_data['sitecode'][$x]['id'])
+      if($text == $php_data['user'][$x]['id'])
       {
-      $speech = $php_data['sitecode'][$x]['name'];
+      $speech = $php_data['user'][$x]['name'];
       break;
       }
 //      else
@@ -37,7 +37,7 @@ if($method == 'POST'){
 else
 {
     echo "Method not allowed";
-    echo $php_data['sitecode'][0]['id'];
+    //echo $php_data['user'][0]['id'];
 }
 
 ?>
