@@ -29,6 +29,10 @@ if($method == 'POST'){
             $speech = "yes This question is too personal";
             //$speech = $php_data['sitecode'][1]['id']
             break;
+        case 'hi5':
+            //$speech = "Hi5 yes This question is too personal";
+            $speech = $php_data['sitecode'][1]['id'];
+            break;
         default:
             $speech = "Sorry, I didnt get that 888.";
             break;
