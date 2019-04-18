@@ -29,7 +29,9 @@ if($method == 'POST'){
             if($php_data[sitecode'][0]['id'] == 'e001'){
             $speech = "yes This question is too personal";
             }
+            else{
             $speech = "no This question is too personal";
+            }
             //$speech = $php_data['sitecode'][1]['id']
             break;
         case 'hi5':
