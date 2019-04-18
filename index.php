@@ -10,7 +10,7 @@ if($method == 'POST'){
     $php_data = json_decode($json_data);
     
   
-//    echo $json['sitecode'][1]['id'];
+    echo $json['sitecode'][1]['id'];
     
     
     
