@@ -18,9 +18,9 @@ if($method == 'POST'){
     
      $text = $json->result->parameters->text;
 
-    if($text == 'e001')
+    if($text == $php_data['sitecode'][0]['id'])
     {
-    $speech = "000 This question is too personal";
+    $speech = "e001 This question is too personal";
     
     }
     else
