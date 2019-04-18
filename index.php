@@ -13,7 +13,7 @@ if($method == 'POST'){
     //echo $json['sitecode'][1]['id'];
      $text = $json->result->parameters->text;
     
-    foeeach($php_data['sitecode']['id'] as $text)
+    foeeach($php_data['sitecode'] as $text)
     {
       
         $speech = $php_data['sitecode'][0]['id'];
