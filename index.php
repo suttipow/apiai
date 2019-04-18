@@ -6,7 +6,7 @@ if($method == 'POST'){
 //    $requestBody = file_get_contents('php://input');
 //    $json = json_decode($requestBody);
 
-    $jsondata = file_get_contents('test.json');
+    $jsondata = file_get_contents("test.json");
     $json = json_decode($jsondata,true);
   
 //    echo $json['sitecode'][1]['id'];
