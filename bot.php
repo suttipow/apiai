@@ -34,6 +34,17 @@
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
+
+    else if($message == "รูป audit"){
+        $image_url = "https://drive.google.com/drive/folders/0B-DRdZfpUS8bfllWV1VUUFlBUFFTaEZzbFBqVV9OZXZ4ZkU2dTlDMDRBZV85ZVAyck5HakU
+";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
     #ตัวอย่าง Message Type "Location"
     else if($message == "พิกัดสยามพารากอน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
