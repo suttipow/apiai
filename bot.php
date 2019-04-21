@@ -36,8 +36,7 @@
     }
 
     else if($message == "รูป audit"){
-        $image_url = "https://drive.google.com/drive/folders/0B-DRdZfpUS8bfllWV1VUUFlBUFFTaEZzbFBqVV9OZXZ4ZkU2dTlDMDRBZV85ZVAyck5HakU
-";
+        $image_url = "https://drive.google.com/open?id=1IJiOYQus8xDmO6E_-Qp5O8CW8RykWy8U";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
