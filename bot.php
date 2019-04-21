@@ -36,7 +36,7 @@
     }
 
     else if($message == "รูป audit"){
-        $image_url = "https://drive.google.com/file/d/1yILB7kCywLG0W7SSoXDcefR4QfYB-AZZ/preview";
+        $image_url = "https://www.unzeen.com/wp-content/uploads/2017/03/OAuth2-flow.png";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
