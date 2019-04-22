@@ -28,9 +28,9 @@ $php_data = json_decode($json_data,true);
           $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
           $arrayPostData['messages'][0]['type'] = "text";
           $arrayPostData['messages'][0]['text'] = $speech;
-          $arrayPostData['messages'][1]['type'] = "sticker";
-          $arrayPostData['messages'][1]['packageId'] = "2";
-          $arrayPostData['messages'][1]['stickerId'] = "34";
+      //    $arrayPostData['messages'][1]['type'] = "sticker";
+      //    $arrayPostData['messages'][1]['packageId'] = "2";
+      //    $arrayPostData['messages'][1]['stickerId'] = "34";
           replyMsg($arrayHeader,$arrayPostData);
           break;
           }
@@ -52,6 +52,21 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "ดิง"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "sticker";
+        $arrayPostData['messages'][0]['packageId'] = "2";
+        $arrayPostData['messages'][0]['stickerId'] = "46";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "มังๆ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "sticker";
+        $arrayPostData['messages'][0]['packageId'] = "2";
+        $arrayPostData['messages'][0]['stickerId'] = "46";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
     #ตัวอย่าง Message Type "Image"
     else if($message == "รูปน้องแมว"){
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
