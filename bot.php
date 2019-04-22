@@ -1,4 +1,12 @@
 <?php
+//======== start =======
+$json_data = file_get_contents("test2.json");    
+$php_data = json_decode($json_data,true);
+
+    
+
+//===== End ====
+    
     $accessToken = "GrdyWWMyGn+VXUKHo9ndyocqkUWecuwSt+UEg9sGg4fJ8XzD1DB/JtZr9bAEvzBo8PdQqCW4TwMEhGWyT2dGc6gfWWcTH2oiZGAJIWwZCx9GnwlTEVmBWJdw7pdRcChdCCq0S0dIt1nekDN6mnIb4QdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
     $content = file_get_contents('php://input');
@@ -10,8 +18,24 @@
     
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
+        //===== start ===
+        
+     for($x = 0; $x <= 2000; $x++)
+     {
+          if($message == $php_data['user'][$x]['id'])
+          {
+          $speech = $php_data['user'][$x]['name'];
+          $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+          $arrayPostData['messages'][0]['type'] = "text";
+          $arrayPostData['messages'][0]['text'] = $speech;
+          replyMsg($arrayHeader,$arrayPostData);
+          break;
+          }
+     }
+        //===== stop ===
+
 #ตัวอย่าง Message Type "Text"
-    if($message == "สวัสดี"){
+    if($message == "สวัสดี"){     
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
