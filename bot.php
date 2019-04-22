@@ -83,6 +83,15 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][0]['longitude'] = "100.532752";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "พิกัดmarriott"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "location";
+        $arrayPostData['messages'][0]['title'] = "สยามพารากอน";
+        $arrayPostData['messages'][0]['address'] =   "13.7413525,100.5526719";
+        $arrayPostData['messages'][0]['latitude'] = "13.7413525";
+        $arrayPostData['messages'][0]['longitude'] = "100.5526719";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
     else if($message == "ลาก่อน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
