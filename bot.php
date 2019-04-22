@@ -66,7 +66,7 @@ $php_data = json_decode($json_data,true);
 
     else if($message == "รูปapi"){
        // $image_url = "https://www.unzeen.com/wp-content/uploads/2017/03/OAuth2-flow.png";
-        $image_url = "https://drive.google.com/uc?id=11YmrMz9BdYS2kIW1QPddkSC7jiwohtG7";
+        $image_url = "https://drive.google.com/uc?id=15XeJygY1BFR6dV6J-tTB5_jf6u6dolU3";
    
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
