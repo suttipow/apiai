@@ -22,7 +22,7 @@ $php_data = json_decode($json_data,true);
         
      for($x = 0; $x <= 2000; $x++)
      {
-          if($message == $php_data['user'][$x]['id'])
+          if(strtoupper($message) == $php_data['user'][$x]['id'])
           {
           $speech = $php_data['user'][$x]['name'];
           $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -86,7 +86,7 @@ $php_data = json_decode($json_data,true);
     else if($message == "พิกัดmarriott"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
-        $arrayPostData['messages'][0]['title'] = "สยามพารากอน";
+        $arrayPostData['messages'][0]['title'] = "JW Marriott";
         $arrayPostData['messages'][0]['address'] =   "13.7413525,100.5526719";
         $arrayPostData['messages'][0]['latitude'] = "13.7413525";
         $arrayPostData['messages'][0]['longitude'] = "100.5526719";
