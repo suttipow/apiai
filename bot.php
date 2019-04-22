@@ -30,7 +30,7 @@ $php_data = json_decode($json_data,true);
           $arrayPostData['messages'][0]['text'] = $speech;
           $arrayPostData['messages'][1]['type'] = "sticker";
           $arrayPostData['messages'][1]['packageId'] = "2";
-          $arrayPostData['messages'][1]['stickerId'] = "26";
+          $arrayPostData['messages'][1]['stickerId'] = "34";
           replyMsg($arrayHeader,$arrayPostData);
           break;
           }
