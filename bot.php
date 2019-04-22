@@ -52,20 +52,7 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "ดิง"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "sticker";
-        $arrayPostData['messages'][0]['packageId'] = "2";
-        $arrayPostData['messages'][0]['stickerId'] = "46";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
-    else if($message == "มังๆ"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "sticker";
-        $arrayPostData['messages'][0]['packageId'] = "2";
-        $arrayPostData['messages'][0]['stickerId'] = "46";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
+
 
     #ตัวอย่าง Message Type "Image"
     else if($message == "รูปน้องแมว"){
