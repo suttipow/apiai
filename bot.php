@@ -65,8 +65,8 @@ $php_data = json_decode($json_data,true);
     }
 
     else if($message == "รูปapi"){
-        $image_url = "https://www.unzeen.com/wp-content/uploads/2017/03/OAuth2-flow.png";
-        $image_url = "https://www.googleapis.com/drive/v3/files/1zN2VVqp5PSkMgzhyf3csYzeB2ypOdF7Q?alt=media";
+       // $image_url = "https://www.unzeen.com/wp-content/uploads/2017/03/OAuth2-flow.png";
+        $image_url = "https://www.googleapis.com/uc?id=1zN2VVqp5PSkMgzhyf3csYzeB2ypOdF7Q";
    
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
