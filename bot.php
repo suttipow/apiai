@@ -18,8 +18,11 @@ $php_data = json_decode($json_data,true);
     
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
-        //===== start ===
-        
+
+    //===== start ===
+    
+    $message = preg_replace('/[[:space:]]+/', '', trim($message));
+
      for($x = 0; $x <= 2000; $x++)
      {
           if(strtoupper($message) == $php_data['user'][$x]['id'])
