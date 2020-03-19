@@ -55,21 +55,8 @@ $php_data = json_decode($json_data,true);
   //      $arrayPostData['messages'][0]['stickerId'] = "46";
           $arrayPostData['messages'][0]['type'] = "template";
           $arrayPostData['messages'][0]['altText'] = "Carousel daftar berita";
-          $arrayPostData['messages'][0]['altText'] = "Carousel daftar berita";
-          $arrayPostData['messages'][0]['template'] = "{
-            type: 'carousel',
-            columns: [
-      {
-        "thumbnailImageUrl": "https://live.staticflickr.com/65535/48941198207_425b166141_h.jpg",
-        "title": "Title",
-        "text": "Text",
-        "actions": [
-          {
-            "type": "message",
-            "label": "Action 1",
-            "text": "Action 1"
-          }]
-        }";
+              $arrayPostData['messages'][0]['template'] = "carousel";
+          $arrayPostData['messages'][0]['thumbnailImageUrl'] = "https://live.staticflickr.com/65535/48941198207_425b166141_h.jpg";
         
         replyMsg($arrayHeader,$arrayPostData);
     }
