@@ -55,6 +55,12 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "svc"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "https://live.staticflickr.com/65535/49675469438_1c07e119c0_h.jpg";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 
 
     #ตัวอย่าง Message Type "Image"
@@ -62,9 +68,8 @@ $php_data = json_decode($json_data,true);
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['type'] = "line";
-        //$arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        //$arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
 
