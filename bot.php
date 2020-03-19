@@ -55,14 +55,7 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "svc"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://live.staticflickr.com/65535/49675469438_1c07e119c0_h.jpg";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
-
-
+ 
     #ตัวอย่าง Message Type "Image"
     else if($message == "รูปน้องแมว"){
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
@@ -73,10 +66,10 @@ $php_data = json_decode($json_data,true);
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-    else if($message == "รูปapi"){
+    else if($message == "svc"){
        // $image_url = "https://www.unzeen.com/wp-content/uploads/2017/03/OAuth2-flow.png";
-        $image_url = "https://drive.google.com/uc?id=1OGjHEa5P2Res7ojeV3pm_vmLprgFMund";
-   
+       // $image_url = "https://drive.google.com/uc?id=1OGjHEa5P2Res7ojeV3pm_vmLprgFMund";
+        $image_url = "https://live.staticflickr.com/65535/49675469438_1c07e119c0_h.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
