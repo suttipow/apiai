@@ -50,14 +50,9 @@ $php_data = json_decode($json_data,true);
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-  //      $arrayPostData['messages'][0]['type'] = "sticker";
-  //      $arrayPostData['messages'][0]['packageId'] = "2";
-  //      $arrayPostData['messages'][0]['stickerId'] = "46";
-          $arrayPostData['messages'][0]['type'] = "template";
-          $arrayPostData['messages'][0]['altText'] = "Carousel daftar berita";
-              $arrayPostData['messages'][0]['template'] = "carousel";
-          $arrayPostData['messages'][0]['thumbnailImageUrl'] = "https://live.staticflickr.com/65535/48941198207_425b166141_h.jpg";
-        
+        $arrayPostData['messages'][0]['type'] = "sticker";
+        $arrayPostData['messages'][0]['packageId'] = "2";
+        $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -67,8 +62,9 @@ $php_data = json_decode($json_data,true);
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][0]['type'] = "line";
+        //$arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        //$arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
 
