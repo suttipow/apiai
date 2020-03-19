@@ -73,7 +73,8 @@ $php_data = json_decode($json_data,true);
    
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.svc.in.th";
+        $arrayPostData['messages'][0]['uri'] = "https://www.google.com"; 
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
