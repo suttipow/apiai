@@ -59,19 +59,26 @@ $php_data = json_decode($json_data,true);
     #ตัวอย่าง Message Type "Image"  
 
 
-    else if($message == "รูปน้องแมว"){
-        $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
+    else if($message == "แนะนำ"){
+        $image_url = "https://live.staticflickr.com/65535/49678882171_6b4f0d3bea_z.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+
+        $image_url1 = "https://live.staticflickr.com/65535/49677854488_a6dabc4e57_b.jpg";
+      
+        $arrayPostData['messages'][1]['type'] = "image";
+        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url1;
+        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url1;  
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-    else if($message == "แนะนำ"){
+    else if($message == "ผลงาน"){
        // $image_url = "https://www.unzeen.com/wp-content/uploads/2017/03/OAuth2-flow.png";
        // $image_url = "https://drive.google.com/uc?id=1OGjHEa5P2Res7ojeV3pm_vmLprgFMund";
         $image_url = "https://live.staticflickr.com/65535/49677854488_a6dabc4e57_b.jpg";
+
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['id'] = "325708";
         $arrayPostData['messages'][0]['type'] = "video";
