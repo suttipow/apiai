@@ -81,6 +81,7 @@ $php_data = json_decode($json_data,true);
     else if($message == "video"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];        
         $arrayPostData['messages'][0]['type'] = "video";
+        $arrayPostData['messages'][0]['type'] = "external";
         $arrayPostData['messages'][0]['originalContentUrl'] = "https://apiai-chatbot-webhook555.herokuapp.com/svc1.mp4";
         $arrayPostData['messages'][0]['previewImageUrl'] = "https://apiai-chatbot-webhook555.herokuapp.com/svc1.mp4";
 
