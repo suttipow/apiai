@@ -60,7 +60,7 @@ $php_data = json_decode($json_data,true);
 
 
     else if($message == "แนะนำ"){
-        $image_url = "https://live.staticflickr.com/65535/49678882171_6b4f0d3bea_z.jpg";
+        $image_url = "https://live.staticflickr.com/65535/49679364257_a60fde72d3_z.jpg";
         $image_url1 = "https://live.staticflickr.com/65535/49677854488_a6dabc4e57_b.jpg";
 
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
