@@ -76,11 +76,14 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "video"){
+  
         
-        
-        $arrayPostData['messages'][1]['type'] = "video";
-        $arrayPostData['messages'][1]['originalContentUrl'] = "http://apiai-chatbot-webhook555.herokuapp.com/svc1.mp4";
-        $arrayPostData['messages'][1]['previewImageUrl'] = "http://apiai-chatbot-webhook555.herokuapp.com/svc1.mp4";
+        $arrayPostData['messages'][0]['type'] = "video";
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://apiai-chatbot-webhook555.herokuapp.com/svc1.mp4";
+        $arrayPostData['messages'][0]['previewImageUrl'] = "https://apiai-chatbot-webhook555.herokuapp.com/svc1.mp4";
 
         replyMsg($arrayHeader,$arrayPostData);
     }
