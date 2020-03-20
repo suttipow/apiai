@@ -79,8 +79,8 @@ $php_data = json_decode($json_data,true);
         
         
         $arrayPostData['messages'][1]['type'] = "video";
-        $arrayPostData['messages'][1]['originalContentUrl'] = "https://flic.kr/p/2iFVe3j";
-        $arrayPostData['messages'][1]['previewImageUrl'] = "https://flic.kr/p/2iFVe3j";
+        $arrayPostData['messages'][1]['originalContentUrl'] = "svc1.mp4";
+        $arrayPostData['messages'][1]['previewImageUrl'] = "svc1.mp4";
 
         replyMsg($arrayHeader,$arrayPostData);
     }
