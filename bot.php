@@ -73,16 +73,22 @@ $php_data = json_decode($json_data,true);
        // $image_url = "https://drive.google.com/uc?id=1OGjHEa5P2Res7ojeV3pm_vmLprgFMund";
         $image_url = "https://live.staticflickr.com/65535/49677854488_a6dabc4e57_b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][0]['id'] = "325708";
+        $arrayPostData['messages'][0]['type'] = "video";
+        $arrayPostData['messages'][0]['duration'] = 4000;
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://apiai-chatbot-webhook555.herokuapp.com/svc1.mp4";
+        $arrayPostData['messages'][0]['previewImageUrl'] = "https://live.staticflickr.com/31337/49678300113_67007bcda1_z.jpg";
+
+        $arrayPostData['messages'][1]['type'] = "image";
+        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($message == "video"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken']; 
         $arrayPostData['messages'][0]['id'] = "325708";
         $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['duration'] = 60000;
+        $arrayPostData['messages'][0]['duration'] = 4000;
         $arrayPostData['messages'][0]['originalContentUrl'] = "https://apiai-chatbot-webhook555.herokuapp.com/svc1.mp4";
         $arrayPostData['messages'][0]['previewImageUrl'] = "https://live.staticflickr.com/31337/49678300113_67007bcda1_z.jpg";
 
