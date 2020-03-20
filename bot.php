@@ -61,16 +61,17 @@ $php_data = json_decode($json_data,true);
 
     else if($message == "แนะนำ"){
         $image_url = "https://live.staticflickr.com/65535/49678882171_6b4f0d3bea_z.jpg";
+        $image_url1 = "https://live.staticflickr.com/65535/49677854488_a6dabc4e57_b.jpg";
+
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url1;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url1;
 
-        $image_url1 = "https://live.staticflickr.com/65535/49677854488_a6dabc4e57_b.jpg";
       
         $arrayPostData['messages'][1]['type'] = "image";
-        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url1;
-        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url1;  
+        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;  
         replyMsg($arrayHeader,$arrayPostData);
     }
 
