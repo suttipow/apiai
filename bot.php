@@ -56,7 +56,9 @@ $php_data = json_decode($json_data,true);
         replyMsg($arrayHeader,$arrayPostData);
     }
  
-    #ตัวอย่าง Message Type "Image"
+    #ตัวอย่าง Message Type "Image"  
+
+
     else if($message == "รูปน้องแมว"){
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -74,6 +76,11 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        
+        
+        $arrayPostData['messages'][1]['type'] = "video";
+        $arrayPostData['messages'][1]['originalContentUrl'] = "https://youtu.be/5wMIRKAshD4";
+        $arrayPostData['messages'][1]['previewImageUrl'] = "https://youtu.be/5wMIRKAshD4";
 
         replyMsg($arrayHeader,$arrayPostData);
     }
