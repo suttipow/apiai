@@ -51,7 +51,7 @@ $php_data = json_decode($json_data,true);
     else if($message == "?"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "1. School Van Clever ดีอย่างไร\n2. ทำไมผู้ปกครองจึงชอบระบบ SVC";
+        $arrayPostData['messages'][0]['text'] = "ให้พิมพ์ ตัวเลข หน้าคำถาม\n1. School Van Clever ดีอย่างไร?\n2. ทำไมผู้ปกครองจึงชอบระบบ SVC";
 
      
         replyMsg($arrayHeader,$arrayPostData);
