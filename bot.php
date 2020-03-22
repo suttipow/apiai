@@ -45,6 +45,15 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+        replyMsg($arrayHeader,$arrayPostData);    
+    }
+
+    else if($message == "?"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "1. School Van Clever ดีอย่างไร";
+        $arrayPostData['messages'][2]['text'] = "2. ทำไมผู้ปกครองจึงขอบระบบ SVC";
+     
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
@@ -72,6 +81,10 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][1]['type'] = "image";
         $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;  
+        
+        $arrayPostData['messages'][2]['type'] = "text";
+        $arrayPostData['messages'][2]['text'] = "หากมีคำถามให้พิมพ์คำว่า = ?";
+
         replyMsg($arrayHeader,$arrayPostData);
     }
 
