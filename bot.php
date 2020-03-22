@@ -51,7 +51,7 @@ $php_data = json_decode($json_data,true);
     else if($message == "?"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "1. School Van Clever ดีอย่างไร\n2. ทำไมผู้ปกครองจึงขอบระบบ SVC";
+        $arrayPostData['messages'][0]['text'] = "1. School Van Clever ดีอย่างไร\n2. ทำไมผู้ปกครองจึงชอบระบบ SVC";
 
      
         replyMsg($arrayHeader,$arrayPostData);
@@ -83,7 +83,7 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;  
         
         $arrayPostData['messages'][2]['type'] = "text";
-        $arrayPostData['messages'][2]['text'] = "หากมีคำถามให้พิมพ์คำว่า = ?";
+        $arrayPostData['messages'][2]['text'] = "หากมีคำถามให้พิมพ์ =>?";
 
         replyMsg($arrayHeader,$arrayPostData);
     }
