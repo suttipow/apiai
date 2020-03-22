@@ -51,8 +51,9 @@ $php_data = json_decode($json_data,true);
     else if($message == "?"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] = "1. School Van Clever ดีอย่างไร";
-        $arrayPostData['messages'][2]['text'] = "2. ทำไมผู้ปกครองจึงขอบระบบ SVC";
+        $arrayPostData['messages'][0]['text'] = "1. School Van Clever ดีอย่างไร";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "2. ทำไมผู้ปกครองจึงขอบระบบ SVC";
      
         replyMsg($arrayHeader,$arrayPostData);
     }
