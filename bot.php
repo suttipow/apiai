@@ -83,7 +83,7 @@ $php_data = json_decode($json_data,true);
         $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;  
         
         $arrayPostData['messages'][2]['type'] = "text";
-        $arrayPostData['messages'][2]['text'] = "หากมีคำถามให้พิมพ์ =>?";
+        $arrayPostData['messages'][2]['text'] = "หากมีคำถาม\nให้พิมพ์คำว่า = ? ";
 
         replyMsg($arrayHeader,$arrayPostData);
     }
