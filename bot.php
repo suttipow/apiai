@@ -139,7 +139,7 @@ $php_data = json_decode($json_data,true);
     else if($message == "แจ้งซ่อม"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "081-956-2226";
+        $arrayPostData['messages'][0]['text'] = "สามารถติดต่อทีมงานช่างผู้เชี่ยวชาญได้ที่หมายเลข 081-956-2226 เราพร้อมให้บริการและตอบคำถามที่คุณต้องการ";
         $arrayPostData['messages'][1]['type'] = "sticker";
         $arrayPostData['messages'][1]['packageId'] = "2";
         $arrayPostData['messages'][1]['stickerId'] = "502";
